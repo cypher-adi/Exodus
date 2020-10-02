@@ -7,7 +7,8 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-section {
+/* Header */
+.header {
   position: relative;
   widows: 100%;
   min-height: 100vh;
@@ -17,7 +18,7 @@ section {
   align-items: center;
 }
 
-section::before {
+.header::before {
   content: '';
   position: absolute;
   top: 0;
@@ -30,7 +31,7 @@ section::before {
   animation-delay: 1.5s;
   opacity: 0;
 }
-section .content {
+.header .content {
   position: relative;
   padding: 100px 50px 100px 150px;
   box-sizing: border-box;
@@ -39,18 +40,18 @@ section .content {
   opacity: 0;
 }
 
-section .content h2 {
+.header .content h2 {
   color: #fff;
   font-size: 3em;
   font-weight: 800;
 }
 
-section .content p {
+.header .content p {
   color: #fff;
   font-size: 1.2em;
 }
 
-section .content a {
+.header .content a {
   position: relative;
   display: inline-block;
   padding: 15px 30px;
@@ -65,12 +66,12 @@ section .content a {
   letter-spacing: 2px;
 }
 
-section .imgBox {
+.header .imgBox {
   position: relative;
   padding-right: 150px;
 }
 
-section .imgBox img {
+.header .imgBox img {
   max-width: 500px;
   animation: fade-in 0.5s ease-in forwards;
   animation-delay: 2s;
@@ -165,7 +166,49 @@ section .imgBox img {
   }
 }
 
+/* About */
+.about::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  border-top: 5px solid #ec5426;
+}
+.about {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.about .content {
+  background: #2a2e3a;
+  padding: 100px;
+  width: 50%;
+}
+
+.heading {
+  color: #fff;
+  font-size: 2.5em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.text {
+  color: #fff;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+
+.about .imgBx {
+  background: url(../img/star_wars.jpg);
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Responsiveness */
 @media (max-width: 991px) {
+  /* header */
   .menuIcon {
     position: fixed;
     top: 40px;
@@ -173,6 +216,7 @@ section .imgBox img {
     width: 30px;
     height: 30px;
     background: url('../img/menu.png');
+    border: 2px solid #222;
     filter: invert(1);
     background-size: 30px;
     cursor: pointer;
@@ -209,34 +253,34 @@ section .imgBox img {
     margin: 5px 0;
   }
 
-  section {
+  .header {
     flex-direction: column-reverse;
     justify-content: center;
   }
 
-  section:before {
+  .header:before {
     clip-path: polygon(0 0, 100% 0, 100% 10%, 0 26%);
   }
 
-  section .content {
+  .header .content {
     padding: 50px;
     margin-bottom: 30px;
   }
 
-  section .content h2 {
-    font-size: 1.5em;
+  .header .content h2 {
+    font-size: 2em;
   }
 
-  section .content p {
+  .header .content p {
     font-size: 1em;
   }
 
-  section .content a {
+  .header .content a {
     font-size: 0.8em;
     padding: 10px;
   }
 
-  section .imgBox {
+  .header .imgBox {
     max-width: 100%;
     display: flex;
     justify-content: center;
@@ -245,12 +289,24 @@ section .imgBox img {
     margin-top: 20px;
   }
 
-  section .imgBox img {
+  .header .imgBox img {
     max-width: 300px;
   }
 
   .social {
     left: 50px;
     bottom: 30px;
+  }
+
+  /* about */
+  .about {
+    flex-direction: column-reverse;
+  }
+  .about .content,
+  .about .imgBx {
+    width: 100%;
+    padding: 50px;
+    min-height: 400px;
+    text-align: center;
   }
 }
