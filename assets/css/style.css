@@ -73,6 +73,7 @@
 
 .header .imgBox img {
   max-width: 500px;
+  filter: drop-shadow(15px 10px 10px #000);
   animation: fade-in 0.5s ease-in forwards;
   animation-delay: 2s;
   opacity: 0;
@@ -216,7 +217,6 @@
     width: 30px;
     height: 30px;
     background: url('../img/menu.png');
-    border: 2px solid #222;
     filter: invert(1);
     background-size: 30px;
     cursor: pointer;
