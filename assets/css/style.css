@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* Header */
@@ -207,6 +208,99 @@
   background-position: center;
 }
 
+/* Games */
+
+.games {
+  background-color: #12222d;
+  padding: 100px;
+  text-align: center;
+}
+
+.games .container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.games .container .gameBx {
+  position: relative;
+  background: #ddd;
+  width: 350px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.games .container .gameBx img {
+  max-width: 200px;
+}
+
+.games .container .gameBx h2 {
+  font-weight: 600;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+.games a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 20px;
+  margin-top: 50px;
+  border-radius: 5px;
+  background: #ec5426;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+.games a:hover {
+  background: transparent;
+  color: #ec5426;
+  border: 2px solid #ec5426;
+}
+
+/* footer */
+.footer {
+  background: #222;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer ul li {
+  list-style: none;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer ul li a:hover {
+  color: #ec5426;
+}
+
+.footer ul li a i {
+  filter: invert(1);
+  max-width: 20px;
+}
+
 /* Responsiveness */
 @media (max-width: 991px) {
   /* header */
@@ -217,7 +311,7 @@
     width: 30px;
     height: 30px;
     background: url('../img/menu.png');
-    filter: invert(1);
+    filter: invert(1) drop-shadow(3px 2px 2px #000);
     background-size: 30px;
     cursor: pointer;
     background-repeat: no-repeat;
@@ -308,5 +402,37 @@
     padding: 50px;
     min-height: 400px;
     text-align: center;
+  }
+
+  /* games */
+  .games {
+    padding: 50px;
+  }
+
+  .games .container {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .games .container .gameBx {
+    margin: 20px;
+    width: 300px;
+    height: 350px;
+  }
+
+  .games a {
+    font-size: 0.8em;
+    padding: 10px;
+  }
+
+  /* footer */
+  .footer {
+    padding: 20px 50px;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .footer ul {
+    margin-bottom: 20px;
   }
 }
