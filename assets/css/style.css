@@ -42,7 +42,7 @@
 }
 
 .header .content h2 {
-  color: #fff;
+  color: #ec5426;
   font-size: 3em;
   font-weight: 800;
 }
@@ -267,6 +267,95 @@
   border: 2px solid #ec5426;
 }
 
+/* Game Store */
+.gamesList {
+  background-color: #12222d;
+  padding: 100px;
+  text-align: center;
+}
+.gamesList .container {
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+#gamesList {
+  padding-inline-start: 0;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+}
+
+.game {
+  list-style-type: none;
+  background-color: #eaeaea;
+  border-radius: 3px;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    'name image'
+    'price image'
+    'addBtn image';
+  text-align: left;
+}
+
+.game h2 {
+  grid-area: name;
+  margin-bottom: 0px;
+}
+
+.game p {
+  grid-area: price;
+  margin: 0;
+  margin-top: 18px;
+}
+
+.game img {
+  max-height: 100px;
+  grid-area: image;
+}
+
+.game a {
+  grid-area: addBtn;
+  position: relative;
+  display: inline-block;
+  width: 160px;
+  padding: 15px;
+  margin-top: 50px;
+  border-radius: 5px;
+  background: #ec5426;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+#searchBar {
+  width: 100%;
+  height: 32px;
+  border-radius: 3px;
+  border: 1px solid #eaeaea;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+#searchWrapper {
+  position: relative;
+}
+
+#searchWrapper::after {
+  content: '🔍';
+  position: absolute;
+  top: 7px;
+  right: 15px;
+}
+
 /* footer */
 .footer {
   background: #222;
@@ -423,6 +512,21 @@
   .games a {
     font-size: 0.8em;
     padding: 10px;
+  }
+
+  /* Games List */
+  .gamesList {
+    padding: 50px;
+  }
+
+  .gamesList .container {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  #gamesList {
+    justify-content: center;
+    align-items: center;
   }
 
   /* footer */

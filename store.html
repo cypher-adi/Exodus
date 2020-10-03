@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamer Zone | Home</title>
+    <title>Gamer Zone | Store</title>
     <link rel="icon" href="./assets/img/favicon.ico" type="image/icon type">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -33,9 +33,9 @@
             <img src="./assets/img/watchdogs.png" alt="">
         </div>
         <ul class="nav" id='nav'>
-            <li><a href="#" class="active">Home</a></li>
+            <li><a href="./index.html">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="./store.html">Game Store</a></li>
+            <li><a href="#" class="active">Game Store</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
         <ul class="social">
@@ -47,56 +47,18 @@
     <span class="menuIcon" id='toggle' onclick="menuToggle()"></span>
     <!--Header End-->
 
-    <!--About Start-->
-    <section class="about" id="about">
-        <div class="content">
-            <h2 class="heading">About Us</h2>
-            <p class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus provident voluptas laborum facere
-                minus ipsa, tempore accusamus at! Voluptatem voluptatibus ducimus voluptate quos necessitatibus pariatur
-                non consequuntur soluta repellat dolore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-                quam commodi perspiciatis iste nisi illo non mollitia aliquam? Suscipit, animi impedit! Consectetur ex
-                culpa pariatur voluptate odit officia sed sint. <br><br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque laborum delectus nostrum vero voluptates
-                ratione voluptatibus architecto sint mollitia. Illum ipsum voluptates incidunt perferendis enim, nihil
-                ab voluptatem sunt quia.
-            </p>
-        </div>
-        <div class="imgBx"></div>
-    </section>
-    <!--About End-->
-
     <!--Games Start-->
-    <section class="games" id='games'>
-        <h2 class="heading">Games</h2>
+    <section class="gamesList" id='games'>
+        <h2 class="heading">Explore the Games</h2>
         <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus provident voluptas laborum facere
-            minus ipsa, tempore accusamus at! Voluptatem voluptatibus ducimus voluptate quos necessitatibus pariatur
-            non consequuntur soluta repellat dolore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-            quam commodi perspiciatis iste nisi illo non mollitia aliquam? Suscipit, animi impedit! Consectetur ex
-            culpa pariatur voluptate odit officia sed sint.
+            Search - Buy - Play
         </p>
         <div class="container">
-            <div class="gameBx">
-                <div>
-                    <img src="./assets/img/games/swor_1.png" alt="">
-                    <h2>Star Wars</h2>
-                </div>
+            <div id="searchWrapper">
+                <input type="text" name="searchBar" id="searchBar" placeholder="search for a game" />
             </div>
-            <div class="gameBx">
-                <div>
-                    <img src="./assets/img/games/swor_2.png" alt="">
-                    <h2>Star Wars</h2>
-                </div>
-            </div>
-            <div class="gameBx">
-                <div>
-                    <img src="./assets/img/games/swor_3.png" alt="">
-                    <h2>Star Wars</h2>
-                </div>
-            </div>
+            <ul id="gamesList"></ul>
         </div>
-        <a href="#">Hit the Game Store</a>
     </section>
     <!--About End-->
 
@@ -113,6 +75,7 @@
     <!--Footer End-->
 
     <script src="./assets/js/main.js"></script>
+    <script type='module' src="./assets/js/search.js"></script>
     <script src="./assets/js/cart.js"></script>
 </body>
 
