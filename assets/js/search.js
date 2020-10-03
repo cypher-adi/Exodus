@@ -27,10 +27,10 @@ const displaygames = (games) => {
     .map((game) => {
       return `
             <li class="game">
-                <h2>${game.name}</h2>
-                <p>Price: ${game.price}</p>
-                <img src="${game.img}"></img>
-                <a href="#">Add to cart</a>
+                <h2 class="shop-item-title">${game.name}</h2>
+                <p class="shop-item-price">$${game.price}</p>
+                <img class="shop-item-image" src="${game.img}"></img>
+                <button class="btn btn-primary shop-item-button" type="button">Add to cart</button>
             </li>
         `;
     })

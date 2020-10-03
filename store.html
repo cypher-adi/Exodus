@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    </style>
+
+    <script src="./assets/js/cart.js" async></script>
+    <script src="./assets/js/search.js" async></script>
 </head>
 
 <body>
@@ -60,7 +62,25 @@
             <ul id="gamesList"></ul>
         </div>
     </section>
-    <!--About End-->
+    <!--Game End-->
+
+    <!--Cart Start-->
+    <section class="container content-section">
+        <h2 class="section-header">CART</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$0</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+    </section>
+    <!--Cart End-->
 
     <!--Footer Start-->
     <section class="footer">
@@ -73,10 +93,7 @@
         </ul>
     </section>
     <!--Footer End-->
-
     <script src="./assets/js/main.js"></script>
-    <script type='module' src="./assets/js/search.js"></script>
-    <script src="./assets/js/cart.js"></script>
 </body>
 
 </html>
